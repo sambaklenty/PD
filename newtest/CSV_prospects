@@ -1,0 +1,11 @@
+describe('Add Prospect Page', function() {
+  it('Prospects page', function() {
+ cy.visit('https://klenty-test-3.herokuapp.com');
+    cy.get('#username').type('sambatest07@zoho.com');
+    cy.get('#password').type('klenty123$');
+    cy.get('#loginSubmit').click();
+    cy.wait(30000);
+if (expect (cy.get('.p-b-sm > .fa')).to.exist){
+cy.get('.p-b-sm > .fa').click();}
+else{}
+    cy.get('[ui-sref="app.prospects"] > .md-ink-ripple > .icon').click();
